@@ -1,5 +1,6 @@
 mkdir fig
 mkdir png
+mkdir badFits
 fitsIn = struct();
 fitsOut = struct();
 keys = fieldnames(data);
@@ -13,6 +14,7 @@ for i = 1:length(keys)
         fitsOut.(key) = fitOut; 
     else
         disp(sprintf('igorring fit: %s', key));
+        movefile(sprintf("fig/%s.fig", key), "badFits");
     end
     
     

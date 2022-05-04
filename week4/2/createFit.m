@@ -19,28 +19,10 @@ function [fitresultIn, fitresultOut, gofIn, gofOut] = createFit(data, name)
 [tIn, vIn] = prepareCurveData( data.tIn, data.vIn);
 [ tOut, vOut] =  prepareCurveData(data.tOut, data.vOut);
 
-% Set up fittype and options.
-ftIn = fittype( 'a1*cos(b1*x+c1)+d1', 'independent', 'x', 'dependent', 'y' );
-optsIn = fitoptions( 'Method', 'NonlinearLeastSquares' );
-optsIn.Display = 'Off';
-optsIn.Upper = [Inf Inf 2*pi];
-optsIn.Lower = [0 0 0];
-% opts.StartPoint = [3.21586015845373 str2double(name(2:end)) -0.391565891393376];
-optsIn.StartPoint = [0.6 2*pi*str2double(name(2:end)) 0];
-
-ftOut = fittype( 'sin1');
-optsOut = fitoptions( 'Method', 'NonlinearLeastSquares' );
-optsOut.Display = 'Off';
-optsOut.Upper = [Inf Inf 2*pi];
-optsOut.Lower = [0 0 0];
-% opts.StartPoint = [3.21586015845373 str2double(name(2:end)) -0.391565891393376];
-optsOut.StartPoint = [max(vOut) 2*pi*str2double(name(2:end)) 0];
-
-
 
 % Fit model to data.
-[fitresultIn, gofIn] = fit( tIn, vIn, ftIn, optsIn );
-[fitresultOut, gofOut] = fit( tOut, vOut, ftOut, optsOut );
+[fitresultIn, gofIn] = oneFit(tIn, vIn, name);
+[fitresultOut, gofOut] = oneFit(tOut, vOut, name);
 
 % Plot fit with data.
 fig = figure( 'Name', 'untitled fit 2' );
@@ -55,7 +37,7 @@ ylabel( 'Time (s)', 'Interpreter', 'none' );
 title( sprintf('Votage as Function of Time %s hz', name));
 legend([sprintf("r^2 in: %f",gofIn.rsquare), sprintf("r^2 out: %f",gofOut.rsquare), ...
 sprintf("In properties: %s", displayFitProperties(fitresultIn)), sprintf("Out properties: %s", displayFitProperties(fitresultOut))]);
-text(0,0, string(optsOut.StartPoint));
+% text(0,0, string(optsOut.StartPoint));
 grid on
 
 saveas(fig, sprintf("png/%s.png", name), "png");
