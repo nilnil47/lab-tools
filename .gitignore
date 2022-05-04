@@ -1,0 +1,15 @@
+*.csv
+*.mat
+*.png
+*.svg
+*.fig
+*.sfit
+*.xlsx
+*.jpeg
+*.docx 
+*.DS_Store
+*.gsheet
+
+**/Icon/*
+**/Icon/**
+**/Icon\*
