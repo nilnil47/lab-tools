@@ -35,3 +35,4 @@ opts.StartPoint = [amplitudeStartPoint, omegaStart, phaseStart, zeroStartPoint];
 [fit_, gof_] = fit( t, v, ft, opts );
     
 end
+
