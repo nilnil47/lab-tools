@@ -25,7 +25,7 @@ function [fitresultIn, fitresultOut, gofIn, gofOut] = createFit(data, name)
 [fitresultOut, gofOut] = oneFit(tOut, vOut, name);
 
 
-% Plot fit with data.
+% % Plot fit with data.
 fig = figure( 'Name', 'untitled fit 2' );
 plotIn = plot( fitresultIn, tIn, vIn);
 hold on

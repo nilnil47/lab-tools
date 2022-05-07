@@ -9,9 +9,22 @@
 *.docx 
 *.DS_Store
 *.gsheet
+*.lyx~
+*.lyx#
+*.zip
 
 **/Icon/*
 **/Icon/**
 **/Icon\*
 
 Icon$'\r'
+
+**/mat/**
+**/sfit/**
+**/csv/**
+**/badFiles/**
+**/png/**
+**/trash/**
+
+
+"*"

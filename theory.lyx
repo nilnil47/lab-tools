@@ -97,6 +97,9 @@
 
 \begin_layout Standard
 כאשר 
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
 \[
 \omega_{0}=\sqrt{\frac{k}{m}}\qquad\zeta=\frac{c}{2\sqrt{mk}}
@@ -104,6 +107,46 @@
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+ועבור מעגל 
+\begin_inset Formula $RLC$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{d^{2}}{dt^{2}}I(t)+2\alpha\frac{d}{dt}I(t)+\omega_{0}^{2}I(t)=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\omega_{0}=\sqrt{\frac{1}{LC}}\qquad\alpha=\frac{R}{2L}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ומקדם הדעיכה נתון על ידי: 
+\begin_inset Formula 
+\[
+\zeta=\frac{\alpha}{\omega_{0}}=\frac{R}{2}\sqrt{\frac{C}{L}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 הפתרון לאוסילטור נתון באמצעות:
 \begin_inset Formula 
 \[
