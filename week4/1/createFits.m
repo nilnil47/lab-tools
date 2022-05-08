@@ -1,14 +1,17 @@
 mkdir fig
 mkdir png
 mkdir badFits
-fitsIn = struct();
+fits = struct();
 fitsOut = struct();
-keys = fieldnames(data);
+
+data_ = underFitData;
+keys = fieldnames(data_);
 for i = 1:length(keys)
 
     key = keys{i};
-    val = data.(key);
-    createFit(val, key);
+    val = data_.(key);
+    fits_ = createFit(val, key);
+    fits.(key) = fits_;
     % [fitIn, fitOut, gofIn, gofOut] = createFit(val, key);
     % if (gofOut.rsquare > 0.9)
     %     fitsIn.(key) = fitIn;

@@ -27,12 +27,19 @@ amplitudeStartPoint = (vMax - vMin) / 2
 zeroStartPoint = vMin
 dumpingStart = a
 
-ft = fittype( 'A1*exp(b*x)+A2*x*exp(b*x)+c', 'independent', 'x', 'dependent', 'y' );
+ft = fittype( 'A2*x*exp(b*x)+c', 'independent', 'x', 'dependent', 'y' );
 opts = fitoptions( 'Method', 'NonlinearLeastSquares' );
 opts.Display = 'Off';
 opts.Upper = [Inf, Inf, Inf, Inf];
 opts.Lower = [-Inf, -Inf, -Inf, -Inf];
-opts.StartPoint = [amplitudeStartPoint, amplitudeStartPoint, dumpingStart, zeroStartPoint];
+opts.StartPoint = [amplitudeStartPoint, dumpingStart, zeroStartPoint];
+
+% ft = fittype( 'A1*exp(b*x)+A2*x*exp(b*x)+c', 'independent', 'x', 'dependent', 'y' );
+% opts = fitoptions( 'Method', 'NonlinearLeastSquares' );
+% opts.Display = 'Off';
+% opts.Upper = [Inf, Inf, Inf, Inf];
+% opts.Lower = [-Inf, -Inf, -Inf, -Inf];
+% opts.StartPoint = [amplitudeStartPoint, amplitudeStartPoint, dumpingStart, zeroStartPoint];
 
 
 [fit_, gof_] = fit( t, v, ft, opts );

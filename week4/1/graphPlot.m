@@ -1,7 +1,7 @@
-name = "main";
+name = "dumping";
 mkdir main;
 hold on
-errorbar(R,T,Terror,Terror,Rerror,Rerror,LineStyle="none") 
+
 set(gca,'FontSize',30);
 
 %Add labels:
