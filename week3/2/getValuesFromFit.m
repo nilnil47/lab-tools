@@ -5,7 +5,7 @@ fitFrequencyIn = [];
 fitFrequencyOut = [];
 AIn = [];
 AOut = [];
-
+inputFrequencyErrorLog = [];
 AErrorPlus = [];
 AErrorMinus = [];
 
@@ -21,9 +21,13 @@ for i = 1:length(keys)
     phiInError_ = getErrorsFromFit(fitIn);
     phiOutError_ = getErrorsFromFit(fitOut);
 
-    phiError = [phiError, phiOutError_ + phiInError_];
+    phiError = [phiError, phiOutError_(3) + phiInError_(3)];
+    deltaLogFitIn = log(deltaFitIn)
+
 
     phi = [phi, fitIn.c1 - fitOut.c1];
+    inputFrequencyErrorLog = [inputFrequencyErrorLog, abs(deltaLogFitIn(1,2) - deltaLogFitIn(2,2)) / 4]
+
 
     inputFrequency = [inputFrequency ,str2num(key(2:end))];
 
