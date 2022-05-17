@@ -12,6 +12,7 @@
 *.lyx~
 *.lyx#
 *.zip
+*.pdf
 
 **/Icon/*
 **/Icon/**
