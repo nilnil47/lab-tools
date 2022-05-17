@@ -16,7 +16,7 @@ set(gca,'FontSize',30);
 % gain graph
 errPlot = errorbar(fitFrequencyIn,VB,VBerror,VBerror,fitFrequencyInError,fitFrequencyInError,LineStyle="none") 
 xlabel('Angular Frequency (rad / s)','FontSize',20);
-ylabel('Voltage On Capacitor (volt)','FontSize',20);
+ylabel('Voltage gain (DB)','FontSize',20);
 title('Gain in RC Circuit', 'FontSize',30);
 errPlot.LineWidth = 5;
 grid on;

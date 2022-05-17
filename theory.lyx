@@ -80,77 +80,9 @@
 \begin_body
 
 \begin_layout Standard
-במעגל 
-\begin_inset Formula $RLC$
-\end_inset
-
- נתון הקשר
 \begin_inset Formula 
 \[
-\frac{\mathrm{d}^{2}x}{\mathrm{~d}t^{2}}+2\zeta\omega_{0}\frac{\mathrm{d}x}{\mathrm{~d}t}+\omega_{0}^{2}x=\frac{F_{0}}{m}\sin(\omega t)
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-כאשר 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\omega_{0}=\sqrt{\frac{k}{m}}\qquad\zeta=\frac{c}{2\sqrt{mk}}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-ועבור מעגל 
-\begin_inset Formula $RLC$
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\frac{d^{2}}{dt^{2}}I(t)+2\alpha\frac{d}{dt}I(t)+\omega_{0}^{2}I(t)=0
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\omega_{0}=\sqrt{\frac{1}{LC}}\qquad\alpha=\frac{R}{2L}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-ומקדם הדעיכה נתון על ידי: 
-\begin_inset Formula 
-\[
-\zeta=\frac{\alpha}{\omega_{0}}=\frac{R}{2}\sqrt{\frac{C}{L}}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-הפתרון לאוסילטור נתון באמצעות:
-\begin_inset Formula 
-\[
-x(t)=\frac{F_{0}}{m\sqrt{\left(2\omega\omega_{0}\zeta\right)^{2}+\left(\omega_{0}^{2}-\omega^{2}\right)^{2}}}\sin(\omega t+\varphi)
+v(t)=\frac{F_{0}}{m\sqrt{\left(2\omega\omega_{0}\zeta\right)^{2}+\left(\omega_{0}^{2}-\omega^{2}\right)^{2}}}\sin(\omega t+\varphi)
 \]
 
 \end_inset
@@ -164,6 +96,112 @@ x(t)=\frac{F_{0}}{m\sqrt{\left(2\omega\omega_{0}\zeta\right)^{2}+\left(\omega_{0
 \end_inset
 
 נחשב 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+עבור אוסילטור הרמוני:
+\begin_inset Formula 
+\[
+A_{p}=\frac{F_{0}}{\sqrt{\left(k-m\omega_{e}^{2}\right)^{2}+\omega_{e}^{2}\beta^{2}}}=\frac{F_{0}/m}{\sqrt{\left(w_{0}-\omega_{e}^{2}\right)^{2}+\frac{\omega_{e}^{2}\beta^{2}}{m^{2}}}}
+\]
+
+\end_inset
+
+עבור המשוואה הדיפרנציאלית: 
+\begin_inset Formula 
+\[
+\ddot{x}-\frac{\beta}{m}\dot{x}+\frac{k}{m}x=\frac{F_{0}}{\mathrm{~m}}\cos\left(\omega_{p}t\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ולכן עם נקביל את התופעה למעגל 
+\begin_inset Formula $RLC$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+L\frac{di^{2}}{d^{2}t}+R\frac{di}{dt}+\frac{1}{C}i(t)=V_{o}\omega\cos\omega t\rightarrow L\frac{v''}{R}+v'+\frac{1}{CR}v=V_{o}\omega\cos\omega t
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ולכן
+\begin_inset Formula 
+\[
+A_{p}=\frac{F_{0}}{\sqrt{\left(k-m\omega_{e}^{2}\right)^{2}+\omega_{e}^{2}\beta^{2}}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+A_{p}=\frac{F_{0}}{\sqrt{\left(k-m\omega_{e}^{2}\right)^{2}+\omega_{e}^{2}\beta^{2}}}=\frac{F_{0}/m}{\sqrt{\left(w_{0}-\omega_{e}^{2}\right)^{2}+\frac{\omega_{e}^{2}\beta^{2}}{m^{2}}}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+m\ddot{x}-\beta\dot{x}+kx=F_{0}\cos\left(\omega_{p}t\right)\rightarrow A_{p}=\frac{F_{0}}{\sqrt{\left(k-m\omega_{e}^{2}\right)^{2}+\omega_{e}^{2}\beta^{2}}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{L\ddot{V}}{R}+\dot{V}+\frac{1}{C}V(t)=V_{o}\omega\cos\omega t\rightarrow A_{p}=\frac{F_{0}}{\sqrt{\left(\frac{1}{C}-\frac{L}{R}\omega_{e}^{2}\right)^{2}+\omega_{e}^{2}}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+I_{\max}=\frac{V_{\max}}{Z}=\frac{V_{\max}}{\sqrt{R^{2}+\left(X_{L}-X_{C}\right)^{2}}}=\frac{V_{\max}}{\sqrt{R^{2}+\left(\omega_{r}L-\frac{1}{\omega_{r}C}\right)^{2}}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\phi=\tan^{-1}\left(\frac{\omega}{\omega_{0}}\right)=\rightarrow\phi=\tan^{-1}\left(\frac{\exp\left(\ln\omega\right)}{\omega_{0}}\right)=\tan^{-1}\left(\frac{\ln\left(\exp\omega\right)}{\ln\left(\exp\omega_{0}\right)}\right)=\ln\left(\frac{\left(\exp\omega\right)}{\left(\exp\omega_{0}\right)}\right)=\tan^{-1}\left(\ln\left(\exp\left(\omega\right)\right)-\ln\left(\exp\left(\omega_{0}\right)\right)\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\phi=\tan^{-1}\ln\left[\exp\left(\frac{\omega}{\omega_{0}}\right)\right]=\tan^{-1}\text{\ensuremath{\exp}}\left[\ln\left(\frac{\omega}{\omega_{0}}\right)\right]=\text{\ensuremath{\exp}}\left[\ln\left(\omega\right)-\ln\left(\omega_{0}\right)\right]=
+\]
+
+\end_inset
+
+
 \end_layout
 
 \end_body
