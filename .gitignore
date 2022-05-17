@@ -18,7 +18,7 @@
 **/Icon/*
 **/Icon/**
 **/Icon\*
-
+**/Icon$'\r'/**
 Icon$'\r'
 
 **/mat/**
@@ -27,6 +27,3 @@ Icon$'\r'
 **/badFiles/**
 **/png/**
 **/trash/**
-
-
-"*"
