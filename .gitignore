@@ -13,6 +13,7 @@
 *.lyx#
 *.zip
 *.pdf
+*.asv
 
 **/Icon/*
 **/Icon/**

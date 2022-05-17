@@ -27,3 +27,4 @@ for typeIndex = 1:length(types)
 end
 
 % d = unique(d)
+clear types typeIndex i key keys m files data_ 
